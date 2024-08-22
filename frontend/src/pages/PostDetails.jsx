@@ -87,7 +87,7 @@ const PostDetails = () => {
             className="w-full mx-auto mt-8"
             alt=""
           />
-          <p className="mx-auto mb-4 mt-4">{post.content}</p>
+          <p className="mx-auto text-base font-semibold mb-4 mt-8 whitespace-pre-wrap">{post.content}</p>
           <Comment className="mb-2" postId={postId}/>
         </div>
       )}
