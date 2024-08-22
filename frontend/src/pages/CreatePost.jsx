@@ -37,7 +37,7 @@ const CreatePost = () => {
           }
         }
         catch(err){
-          console.log(err.message);
+          console.error(err);
           alert("There was an error creating the post. Please try again.");
         }
     }
