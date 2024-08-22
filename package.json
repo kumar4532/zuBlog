@@ -4,7 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/server.js",
-    "build:frontend": "bun build frontend/src/main.jsx --outdir dist/frontend",
+    "build:frontend": "cd frontend && bun run build",
     "build:backend": "bun build backend/server.js --outdir dist/backend",
     "build": "bun run build:frontend && bun run build:backend"
   },
