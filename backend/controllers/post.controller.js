@@ -28,7 +28,6 @@ const createPost = async(req, res) => {
         })
     } catch (error) {
         console.log("Error in create post controller", error);
-
         return res.status(500).json({
             message: "An error occurred while creating posts",
             error: error.message 
