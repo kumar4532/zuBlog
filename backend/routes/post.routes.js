@@ -13,6 +13,6 @@ router.put("/:id", protectedRoute, upload.single("cover"), updatePost)
 router.get("/:id", getPost)
 router.get("/all/posts", getAllPosts)
 router.get("/user/all", protectedRoute, getAllUserPosts)
-router.get("/", searchPost);
+router.get("/search", searchPost);
 
 export default router;
