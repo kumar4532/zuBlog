@@ -11,7 +11,6 @@ const createPost = async(req, res) => {
         }
     
         const coverImagePath = req.file?.path;
-    
         const coverImage = await uploadOnCloudinary(coverImagePath);
     
         const post = await Post.create({
