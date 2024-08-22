@@ -23,7 +23,7 @@ app.use(express.json())
 app.use(cookieParser());
 
 const allowedOrigins = [
-    "https://zublog-ar70.onrender.com",
+    "https://zublog-kn48.onrender.com",
     "http://localhost:5173"
 ]
 

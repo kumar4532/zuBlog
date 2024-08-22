@@ -1,6 +1,7 @@
 import { v2 as cloudinary} from "cloudinary";
 import fs from 'fs'
 import dotenv from 'dotenv'
+import path from 'path';
 
 dotenv.config();
 
@@ -12,19 +13,20 @@ cloudinary.config({
 
 const uploadOnCloudinary = async (localFilePath) => {
     try {
-        if (!localFilePath) return null;
+        // Use an absolute path to avoid deployment issues
+        const absolutePath = path.resolve(localFilePath);
 
-        if (!fs.existsSync(localFilePath)) {
-            console.error(`File not found: ${localFilePath}`);
+        if (!fs.existsSync(absolutePath)) {
+            console.error(`File not found: ${absolutePath}`);
             return null;
         }
 
-        const response = await cloudinary.uploader.upload(localFilePath, {
+        const response = await cloudinary.uploader.upload(absolutePath, {
             resource_type: "auto",
             secure: true
         });
 
-        // fs.unlinkSync(localFilePath);
+        fs.unlinkSync(absolutePath);
         return response;
 
     } catch (error) {
@@ -36,6 +38,6 @@ const uploadOnCloudinary = async (localFilePath) => {
 
         return null;
     }
-}
+};
 
 export {uploadOnCloudinary}
