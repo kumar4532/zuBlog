@@ -3,7 +3,10 @@
   "module": "server.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon  -r dotenv/config --experimental-json-modules backend/server.js"
+    "dev": "nodemon backend/server.js",
+    "build:frontend": "bun build frontend/src/main.jsx --outdir dist/frontend",
+    "build:backend": "bun build backend/server.js --outdir dist/backend",
+    "build": "bun run build:frontend && bun run build:backend"
   },
   "devDependencies": {
     "@types/bun": "latest"
