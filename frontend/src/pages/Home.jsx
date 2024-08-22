@@ -23,7 +23,7 @@ const Home = () => {
 
       const url = query 
         ? `/api/posts?search=${encodeURIComponent(query)}`
-        : "h/api/posts/all/posts";
+        : "/api/posts/all/posts";
 
       const res = await axios.get(url);
       
