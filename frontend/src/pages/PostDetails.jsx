@@ -22,7 +22,7 @@ const PostDetails = () => {
   const fetchPost=async()=>{
     setLoader(true)
     try{
-      const res= await axios.get("http://localhost:3000/api/posts/"+postId)
+      const res= await axios.get("/api/posts/"+postId)
       setPost(res.data.post)
       setLoader(false)
     }
@@ -33,7 +33,7 @@ const PostDetails = () => {
 
   const handleDeletePost=async ()=>{
     try{
-      const res=await axios.delete("http://localhost:3000/api/posts/"+postId,{withCredentials:true})
+      const res=await axios.delete("/api/posts/"+postId,{withCredentials:true})
       navigate("/")
     }
     catch(err){

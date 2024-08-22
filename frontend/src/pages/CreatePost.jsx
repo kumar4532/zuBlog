@@ -22,9 +22,6 @@ const CreatePost = () => {
         formData.append("content", content);
         formData.append("cover", cover);
 
-        console.log(formData.get());
-        
-
         try{
           const res = await axios.post("/api/posts/",formData,{withCredentials:true})
           alert("Post created successfully!");
