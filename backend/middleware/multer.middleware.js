@@ -1,6 +1,8 @@
 import fs from 'fs';
 import path from 'path';
 
+const __dirname = path.resolve();
+
 const tempDir = path.join(__dirname, 'public/temp');
 if (!fs.existsSync(tempDir)) {
     fs.mkdirSync(tempDir, { recursive: true });
