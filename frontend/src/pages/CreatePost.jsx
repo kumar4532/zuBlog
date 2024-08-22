@@ -17,13 +17,16 @@ const CreatePost = () => {
         e.preventDefault()
         setLoading(true)
         const formData = new FormData();
+        formData.append('title', title);
+        formData.append('content', content);
+        if (cover) {
+            formData.append('cover', cover);
+        }
 
-        formData.append("title", title);
-        formData.append("content", content);
-        formData.append("cover", cover);
+        console.log([...formData]);
 
         try{
-          const res = await axios.post("/api/posts/",formData,{withCredentials:true})
+          const res = await axios.post("/api/posts/", formData, {withCredentials:true})
           alert("Post created successfully!");
         
           if (res.data) {
