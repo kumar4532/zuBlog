@@ -11,7 +11,7 @@ const navigate=useNavigate()
 
 const handleLogout=async()=>{
   try{
-    const res = await axios.post("http://localhost:3000/api/auth/logout",{withCredentials:true})
+    await axios.post("/api/auth/logout",{withCredentials:true})
         
     localStorage.removeItem("user");
     setUser(null)

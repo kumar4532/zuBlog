@@ -16,7 +16,7 @@ const MyBlogs = () => {
   const fetchPosts = async () => {
     setLoader(true);
     try {
-        const res = await axios.get("http://localhost:3000/api/posts/user/all", {withCredentials:true});
+        const res = await axios.get("/api/posts/user/all", {withCredentials:true});
         
         setPosts(res.data.posts); 
 

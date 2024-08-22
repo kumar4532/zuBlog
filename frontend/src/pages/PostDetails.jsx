@@ -15,8 +15,6 @@ const PostDetails = () => {
   const postId=useParams().id
   const [post,setPost]=useState({})
   const {user}=useContext(UserContext)
-  const [comments,setComments]=useState([])
-  const [comment,setComment]=useState("")
   const [loader,setLoader]=useState(false)
   const navigate=useNavigate()
   
@@ -46,38 +44,6 @@ const PostDetails = () => {
   useEffect(()=>{
     fetchPost()
   },[postId])
-
-  // const fetchPostComments = async() => {
-  //   setLoader(true)
-  //   try{
-  //     const res = await axios.get("http://localhost:3000/api/comment/"+postId+"/", {withCredentials:true})      
-  //     setComments(res.data.comment)
-  //     setLoader(false)
-  //   }
-  //   catch(err){
-  //     setLoader(true)
-  //     console.log(err)
-  //   }
-  // }
-  
-  // useEffect(()=>{
-  //   fetchPostComments()
-  // },[postId])
-
-  // const postComment=async(e)=>{
-  //   e.preventDefault()
-  //   setLoader(true)
-  //   try{
-  //     const res = await axios.post("http://localhost:3000/api/comment/"+postId+"/", {comment}, {withCredentials:true})
-  //   }
-  //   catch(err){
-  //     console.log(err)
-  //   } finally{
-  //     setLoader(false)
-  //   }
-  // }
-
-  // console.log(comments);
   
   return (
     <div>

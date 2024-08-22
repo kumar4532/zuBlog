@@ -15,7 +15,7 @@ const Register = () => {
   const handleRegister=async ()=>{
     
     try{
-      const res=await axios.post("http://localhost:3000/api/auth/signup",{fullname,username,email,password})  
+      const res=await axios.post("/api/auth/signup",{fullname,username,email,password})  
       
       if (!fullname || !username || !email || !password) {
         setError(true)

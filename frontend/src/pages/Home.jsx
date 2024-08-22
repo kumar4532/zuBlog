@@ -22,8 +22,8 @@ const Home = () => {
       const query = new URLSearchParams(search).get("query");
 
       const url = query 
-        ? `http://localhost:3000/api/posts?search=${encodeURIComponent(query)}`
-        : "http://localhost:3000/api/posts/all/posts";
+        ? `/api/posts?search=${encodeURIComponent(query)}`
+        : "h/api/posts/all/posts";
 
       const res = await axios.get(url);
       

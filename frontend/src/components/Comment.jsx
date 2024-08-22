@@ -15,7 +15,7 @@ const Comment = ({ postId }) => {
   const fetchPostComments = async () => {
     setLoader(true);
     try {
-      const res = await axios.get("http://localhost:3000/api/comment/" + postId + "/", { withCredentials: true });
+      const res = await axios.get("/api/comment/" + postId + "/", { withCredentials: true });
       setComments(res.data.comment);
     } catch (err) {
       console.log(err);
@@ -33,7 +33,7 @@ const Comment = ({ postId }) => {
     e.preventDefault();
     setLoader(true);
     try {
-      const res = await axios.post("http://localhost:3000/api/comment/" + postId + "/", { comment }, { withCredentials: true });
+      const res = await axios.post("/api/comment/" + postId + "/", { comment }, { withCredentials: true });
       fetchPostComments();
       setComment("");
     } catch (err) {
@@ -47,7 +47,7 @@ const Comment = ({ postId }) => {
     e.preventDefault();
     setLoader(true);
     try {
-      const res = await axios.put("http://localhost:3000/api/comment/" + editCommentId, { comment }, { withCredentials: true });
+      const res = await axios.put("/api/comment/" + editCommentId, { comment }, { withCredentials: true });
       fetchPostComments();
       setComment("");
       setEditCommentId(null);
@@ -61,7 +61,7 @@ const Comment = ({ postId }) => {
   const deleteComment = async (id) => {
     setLoader(true);
     try {
-      await axios.delete("http://localhost:3000/api/comment/" + id, { withCredentials: true });
+      await axios.delete("/api/comment/" + id, { withCredentials: true });
       fetchPostComments();
     } catch (err) {
       console.log(err);

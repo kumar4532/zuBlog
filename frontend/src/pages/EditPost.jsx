@@ -17,7 +17,7 @@ const EditPost = () => {
 
     const fetchPost=async()=>{
       try{
-        const res=await axios.get("http://localhost:3000/api/posts/"+postId)
+        const res=await axios.get("/api/posts/"+postId)
         setTitle(res.data.post.title)
         setCover(res.data.post.cover)
         setContent(res.data.post.content)
@@ -37,7 +37,7 @@ const EditPost = () => {
         formData.append("cover", cover);
 
         try{
-          const res = await axios.put("http://localhost:3000/api/posts/" + postId,formData,{withCredentials:true})
+          const res = await axios.put("/api/posts/" + postId,formData,{withCredentials:true})
           alert("Post updated successfully!");
           
           if (res.data && res.data.updatedPost && res.data.updatedPost._id) {

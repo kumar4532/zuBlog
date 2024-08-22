@@ -14,7 +14,7 @@ const Login = () => {
 
   const handleLogin=async()=>{
     try{
-      const res = await axios.post("http://localhost:3000/api/auth/login",{email,password},{withCredentials:true})
+      const res = await axios.post("/api/auth/login",{email,password},{withCredentials:true})
 
       if (!password || !email) {
         setError(true)
