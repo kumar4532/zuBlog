@@ -27,6 +27,9 @@ const CreatePost = () => {
 
         try{
           const res = await axios.post("/api/posts/", formData, {withCredentials:true})
+
+          console.log(res.data);
+          
           alert("Post created successfully!");
         
           if (res.data) {
@@ -34,7 +37,7 @@ const CreatePost = () => {
           }
         }
         catch(err){
-          console.log(err);
+          console.log(err.message);
           alert("There was an error creating the post. Please try again.");
         }
     }
