@@ -4,10 +4,7 @@
   "type": "module",
   "scripts": {
     "dev": "nodemon backend/server.js",
-    "install:frontend": "cd frontend && bun install",
-    "build:frontend": "cd frontend && bun run build",
-    "build:backend": "bun build backend/server.js --outdir dist/backend",
-    "build": "bun run install:frontend && bun run build:frontend && bun run build:backend"
+    "build": "bun install && bun build backend/server.js --outdir dist/backend/ && cd frontend && bun install && bun run build"
   },
   "devDependencies": {
     "@types/bun": "latest"
