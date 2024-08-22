@@ -3,6 +3,7 @@ import dotenv from "dotenv"
 import connectDB from "./DB/connect.js"
 import cookieParser from "cookie-parser";
 import cors from "cors"
+import path from "path";
 
 import authRoutes from "./routes/auth.routes.js"
 import postRoutes from "./routes/post.routes.js"
