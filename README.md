@@ -18,4 +18,8 @@ To Build:
 bun run build
 ```
 
+
+[Deployed Website](https://zublog-kn48.onrender.com/)
+
+
 This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
