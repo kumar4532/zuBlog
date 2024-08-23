@@ -77,23 +77,23 @@ CLOUDINARY_API_SECRET=your_clodinary_api_secret
 Login Information:
 To login you must signin/register and to login you can use email and password.
 
-#Features:
-##Home Page - All the existing posts.
-##Write - Can create posts having values title, cover image and content.
-##MyBlogs - Can fetch your created posts.
-##Search - Can search based on title or content.
-##Logout - Logout your session.
+# Features:
+## Home Page - All the existing posts.
+## Write - Can create posts having values title, cover image and content.
+## MyBlogs - Can fetch your created posts.
+## Search - Can search based on title or content.
+## Logout - Logout your session.
 
-#Actions:
+# Actions:
 
-##Write :
-###Navigate to the write page where you can create new posts.
-###After creating a post, an alert will confirm its creation.
-###You will be redirected to the post you created, where you can update or delete it.
+## Write :
+- Navigate to the write page where you can create new posts.
+* After creating a post, an alert will confirm its creation.
++ You will be redirected to the post you created, where you can update or delete it.
 
-##Update :
-###On the post page, click the update icon to edit the post.
-###You will be redirected to the update page where you can edit the title and content, and update the cover image.
+## Update :
+- On the post page, click the update icon to edit the post.
+* You will be redirected to the update page where you can edit the title and content, and update the cover image.
 
 
 This project was created using `bun init` in bun v1.1.12. [Bun](https://bun.sh) is a fast all-in-one JavaScript runtime.
