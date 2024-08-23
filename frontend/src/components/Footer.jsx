@@ -11,7 +11,7 @@ const Footer = () => {
         <Link><FaInstagramSquare className="mr-2"/></Link>
         <Link to={"https://github.com/kumar4532"}><FaSquareGithub  className="mr-2"/></Link>
       </div>
-      <p className="mx-auto mt-2 text-sm">All rights reserved @Blog Market 2023</p>
+      <p className="mx-auto mt-2 text-sm">All rights reserved @Bloggers</p>
     </div>  
   )
 }
