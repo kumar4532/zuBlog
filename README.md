@@ -70,7 +70,7 @@ CLOUDINARY_API_KEY=your_clodinary_api_key
 CLOUDINARY_API_SECRET=your_clodinary_api_secret
 ```
 
-#Access Deployed Application
+# Access Deployed Application
 
 [Deployed Website](https://zublog-kn48.onrender.com/)
 
@@ -78,11 +78,11 @@ Login Information:
 To login you must signin/register and to login you can use email and password.
 
 # Features:
-## Home Page - All the existing posts.
-## Write - Can create posts having values title, cover image and content.
-## MyBlogs - Can fetch your created posts.
-## Search - Can search based on title or content.
-## Logout - Logout your session.
+1. Home Page - All the existing posts.
+2. Write - Can create posts having values title, cover image and content.
+3. MyBlogs - Can fetch your created posts.
+4. Search - Can search based on title or content.
+5. Logout - Logout your session.
 
 # Actions:
 
