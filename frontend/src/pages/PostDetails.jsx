@@ -1,7 +1,5 @@
 import { useNavigate, useParams } from "react-router-dom"
 import Comment from "../components/Comment"
-import Footer from "../components/Footer"
-import Navbar from "../components/Navbar"
 import {BiEdit} from 'react-icons/bi'
 import {MdDelete} from 'react-icons/md'
 import axios from "axios"
@@ -47,7 +45,6 @@ const PostDetails = () => {
   
   return (
     <div>
-      <Navbar />
       {loader ? (
         <div className="h-[80vh] flex justify-center items-center w-full">
           <Loader />
@@ -91,7 +88,6 @@ const PostDetails = () => {
           <Comment className="mb-2" postId={postId}/>
         </div>
       )}
-      <Footer />
     </div>
   );
 }

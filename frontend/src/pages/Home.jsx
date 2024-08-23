@@ -1,13 +1,10 @@
 import axios from "axios"
-import Footer from "../components/Footer"
 import HomePosts from "../components/HomePosts"
-import Navbar from "../components/Navbar"
 import { useContext, useEffect, useState } from "react"
 import { Link, useLocation } from "react-router-dom"
 import Loader from '../components/Loader'
 import { UserContext } from "../context/UserContext"
  
-
 const Home = () => {
 
   const {search}=useLocation()
@@ -49,7 +46,6 @@ const Home = () => {
 
   return (
     <>
-    <Navbar/>
       <div className="px-8 md:px-[200px] min-h-screen">
           {loader ? <div className="h-[40vh] flex justify-center items-center"><Loader/></div> : 
             (!noResults?
@@ -59,7 +55,6 @@ const Home = () => {
                 </Link>
             )):<h3 className="text-center font-bold py-56">No posts available</h3>)}
       </div>
-    <Footer/>
     </>    
   )
 }

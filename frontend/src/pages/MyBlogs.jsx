@@ -1,6 +1,4 @@
 import { Link } from "react-router-dom";
-import Footer from "../components/Footer";
-import Navbar from "../components/Navbar";
 import { useEffect, useState, useContext } from "react";
 import axios from "axios";
 import HomePosts from "../components/HomePosts";
@@ -39,7 +37,6 @@ const MyBlogs = () => {
 
   return (
     <>
-    <Navbar/>
       <div className="px-8 md:px-[200px] min-h-screen">
           {loader ? <div className="h-[40vh] flex justify-center items-center"><Loader/></div> : 
             (!noResults?
@@ -49,7 +46,6 @@ const MyBlogs = () => {
                 </Link>
             )):<h3 className="text-center font-bold py-56">No posts available</h3>)}
       </div>
-    <Footer/>
     </>
   );
 };

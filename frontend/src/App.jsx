@@ -7,10 +7,12 @@ import CreatePost from './pages/CreatePost'
 import EditPost from './pages/EditPost'
 import MyBlogs from './pages/MyBlogs'
 import { AuthContextProvider } from './context/UserContext'
+import Layout from './components/Layout'
 
 const App = () => {  
   return (
       <AuthContextProvider>
+        <Layout>
         <Routes>
           <Route exact path="/" element={<Home/>}/>
           <Route exact path="/login" element={<Login/>}/>
@@ -20,6 +22,7 @@ const App = () => {
           <Route exact path="/edit/:id" element={<EditPost/>}/>
           <Route exact path="/myblogs" element={<MyBlogs/>}/>
         </Routes>
+        </Layout>
       </AuthContextProvider>
   )
 }

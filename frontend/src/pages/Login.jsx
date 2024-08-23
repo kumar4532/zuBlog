@@ -1,5 +1,4 @@
 import { Link, useNavigate } from "react-router-dom"
-import Footer from "../components/Footer"
 import { useContext, useState } from "react"
 import axios from "axios"
 import { UserContext } from "../context/UserContext"
@@ -31,10 +30,6 @@ const Login = () => {
 
   return (
     <>
-    <div className="flex items-center justify-between px-6 md:px-[200px] py-4">
-      <h1 className="text-lg md:text-2xl font-serif font-bold"><Link to="/">Bloggers</Link></h1>
-      <h3><Link to="/register">Register</Link></h3>
-      </div>
         <div className="w-full flex justify-center items-center h-[80vh] ">
           <div className="flex flex-col justify-center items-center space-y-4 w-[80%] md:w-[25%]">
             <h1 className="text-xl font-bold text-left">Log in to your account</h1>
@@ -48,7 +43,6 @@ const Login = () => {
             </div>
           </div>
         </div>
-    <Footer/>
     </>
     
   )
